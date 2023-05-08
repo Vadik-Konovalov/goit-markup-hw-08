@@ -1,0 +1,155 @@
+/* footer */
+
+.footer {
+    @include section($indent: 60px);
+    background: var(--section-background-colour);
+    color: var(--main-page-color);
+    
+   
+
+    &-title {
+        padding: 0;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: var(--main-page-color);
+        }        
+    
+  
+    &__placeholder  {  
+        
+        
+        margin-left: auto;   
+        margin-right: auto;   
+        width: 100%;        
+        height: 50px;
+        padding: .5em 1em;
+
+        @include respond-to('small') {
+            width: 450px;
+            }
+        
+        @include respond-to('large') {
+            width: 358px;
+            }       
+        
+        
+        color: rgba(255, 255, 255, 0.6);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.25;
+    
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+        border-radius: 4px;
+        background-color: var(--section-background-colour);
+
+        
+        }
+        &__form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;  
+            width: 100%;          
+           
+            @include respond-to('large') {
+                flex-direction: row;
+                gap: 12px;
+                width: 570px;
+            }
+
+        }
+}
+
+
+.holder {
+    
+    @include holder($ai: center);   
+    
+    gap: 60px;
+
+    @include respond-to('medium') {
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    @include respond-to('large') {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: flex-start;
+        }
+
+    &__address {
+        @include holder($ai:center);
+        
+
+        @include respond-to('large') {
+            align-items: flex-start;
+            justify-content: flex-start;
+            }
+    }
+
+    &__social {
+        @include holder($ai: center);
+        justify-content: flex-start;
+        gap: 20px;
+
+        @include respond-to('large') {
+            align-items: flex-start;
+        }
+               
+    }
+    &__input {
+        width: 100%;
+        @include holder($ai: center);
+        gap: 20px;
+       
+        
+        @include respond-to('large') {
+                align-items: flex-start;                
+                }
+        }
+
+        
+    } 
+           
+.contacts {
+    flex-direction: column;
+    align-items: center;
+    width: 232px;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+    transition: var(--timing-text-color);
+
+    gap: 8px;
+    @include respond-to('large') {
+        align-items: flex-start;
+        gap: 9px;
+    }        
+
+    &__adds {        
+        color: var(--main-page-color);        
+        }
+        
+    
+    
+    &__mail2 {        
+        color: rgba(255, 255, 255, 0.6);
+       }
+    
+    
+    &__phone {
+        color: rgba(255, 255, 255, 0.6);
+        }
+}
